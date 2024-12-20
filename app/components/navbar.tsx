@@ -16,7 +16,7 @@ export default function Navbar() {
           priority
         />
         <div>
-          <p className="text-lg md:text-3xl uppercase">
+          <p className="text-xl md:text-3xl uppercase">
             <span className="dark:text-sky-400 text-sky-600 font-black">
               Mark
             </span>{' '}
@@ -59,6 +59,9 @@ export default function Navbar() {
           <li>Works</li>
           <li>About</li>
           <li>Contact</li>
+          <li>
+            <button>Light/Dark</button>
+          </li>
         </ul>
       </div>
       <div className="hidden md:block md:text-xl mt-4">

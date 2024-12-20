@@ -12,6 +12,10 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      // Add these lines:
+      animation: {
+        slowspin: 'spin 10s reverse linear infinite',
+      },
     },
   },
   plugins: [],

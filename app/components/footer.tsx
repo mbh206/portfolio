@@ -1,7 +1,13 @@
 export default function Footer() {
   return (
     <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      <div>this is the footer</div>
+      <div>
+        <span className="font-bold">©</span>{' '}
+        <span className="dark:text-sky-400 text-sky-600 uppercase">
+          Mark Harris{' '}
+        </span>
+        <span className="font-bold">2025</span>
+      </div>
     </footer>
   );
 }
