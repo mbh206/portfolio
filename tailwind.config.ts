@@ -14,7 +14,7 @@ export default {
       },
       // Add these lines:
       animation: {
-        slowspin: 'spin 10s reverse linear infinite',
+        slowspin: 'spin 15s reverse linear infinite',
       },
     },
   },

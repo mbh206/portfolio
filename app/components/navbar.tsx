@@ -1,20 +1,23 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="grid grid-cols-[1fr_20%] md:flex justify-between w-full md:px-5 px-1">
       <div className="flex items-center gap-3">
-        <Image
-          className="dark:invert"
-          src="/logo.svg"
-          alt="Mark Harris logo"
-          width={60}
-          height={38}
-          priority
-        />
+        <Link href="/">
+          <Image
+            className="dark:invert"
+            src="/logo.svg"
+            alt="Mark Harris logo"
+            width={60}
+            height={38}
+            priority
+          />
+        </Link>
         <div>
           <p className="text-xl md:text-3xl uppercase">
             <span className="dark:text-sky-400 text-sky-600 font-black">
@@ -55,28 +58,27 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full flex bg-sky-400 text-slate-700 font-black flex-col items-center uppercase text-center bg- space-y-4 py-4 transition-transform duration-300 ease-in-out transform md:hidden ${isMenuOpen ? '-translate-x-0 top-20' : 'translate-x-full top-20'}`}
       >
         <ul>
-          <li>Home</li>
-          <li>Works</li>
-          <li>About</li>
-          <li>Contact</li>
           <li>
-            <button>Light/Dark</button>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="projects">Projects</Link>
+          </li>
+          <li>
+            <Link href="contact">Contact</Link>
           </li>
         </ul>
       </div>
       <div className="hidden md:block md:text-xl mt-4">
         <ul className="flex space-x-4 font-black">
           <li className="dark:hover:text-sky-400 hover:text-sky-600 cursor-pointer">
-            Home
+            <Link href="/">Home</Link>
           </li>
           <li className="dark:hover:text-sky-400 hover:text-sky-600 cursor-pointer">
-            Works
+            <Link href="projects">Projects</Link>
           </li>
           <li className="dark:hover:text-sky-400 hover:text-sky-600 cursor-pointer">
-            About
-          </li>
-          <li className="dark:hover:text-sky-400 hover:text-sky-600 cursor-pointer">
-            Contact
+            <Link href="contact">Contact</Link>
           </li>
         </ul>
       </div>
