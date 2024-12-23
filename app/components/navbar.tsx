@@ -55,17 +55,23 @@ export default function Navbar() {
         ></span>
       </button>
       <div
-        className={`fixed top-0 left-0 w-full flex bg-sky-400 text-slate-700 font-black flex-col items-center uppercase text-center bg- space-y-4 py-4 transition-transform duration-300 ease-in-out transform md:hidden ${isMenuOpen ? '-translate-x-0 top-20' : 'translate-x-full top-20'}`}
+        className={`z-50 fixed top-0 left-0 w-full flex bg-sky-400 text-slate-700 font-black flex-col items-center uppercase text-center bg- space-y-4 py-4 transition-transform duration-300 ease-in-out transform md:hidden ${isMenuOpen ? '-translate-x-0 top-20' : 'translate-x-full top-20'}`}
       >
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="projects">Projects</Link>
+            <Link href="projects" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              Projects
+            </Link>
           </li>
           <li>
-            <Link href="contact">Contact</Link>
+            <Link href="contact" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
