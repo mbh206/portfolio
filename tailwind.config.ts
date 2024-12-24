@@ -14,6 +14,14 @@ export default {
           '0%': { transform: 'translateY(50px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
       },
       colors: {
         background: 'var(--background)',
@@ -23,6 +31,8 @@ export default {
       animation: {
         slowspin: 'spin 15s reverse linear infinite',
         'slide-up': 'slide-up 0.8s ease forwards',
+        'fade-in': 'fadeIn 0.5s ease forwards',
+        'fade-out': 'fadeOut 0.5s ease forwards',
       },
     },
   },

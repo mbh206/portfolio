@@ -30,87 +30,110 @@ export default function ProjectsPage() {
   }, [messageIndex]);
 
   const handleCardClick = (project: Project) => {
-    if (selectedProject?.id === project.id) {
-      setSelectedProject(null);
-    } else {
-      setSelectedProject(project);
-    }
+    setSelectedProject(project);
+  };
+
+  // Handle modal close
+  const closeModal = () => {
+    setSelectedProject(null);
   };
 
   return (
     <main className="flex flex-col items-center justify-center w-full p-4">
+      {/* Intro Messages */}
       <div className="text-lg md:text-xl mb-8 min-h-[2rem] relative overflow-hidden">
-        {messages[messageIndex]}
+        <span
+          key={messageIndex}
+          className={`transition-opacity duration-500 ${
+            messageIndex > 0 ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          {messages[messageIndex]}
+        </span>
       </div>
 
+      {/* Project Cards */}
       {showCards && (
-        <div
-          className="
-        w-full max-w-4xl
-        grid grid-cols-1 sm:grid-cols-2 gap-4
-        transition-transform
-        animate-slide-up
-      "
-        >
-          {projects.map((project) => {
-            const isSelected = selectedProject?.id === project.id;
-            const isHidden = selectedProject && !isSelected;
-            return (
-              <div
-                key={project.id}
-                className={`
-              border rounded-md p-4 bg-white dark:bg-sky-200 dark:text-slate-700 shadow
-              hover:shadow-lg transition-all cursor-pointer
-              ${isSelected ? 'sm:col-span-2' : ''}
-              ${isHidden ? 'hidden' : ''}
-              ${isSelected ? 'transform scale-105' : ''}
-            `}
-                onClick={() => handleCardClick(project)}
-              >
-                <h2 className="text-lg font-bold uppercase pb-4 text-center">
-                  {project.title}
-                </h2>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {project.tech.map((item, index) => (
-                    <p key={index} className="text-sm uppercase text-center">
-                      {item}
-                    </p>
-                  ))}
-                </div>
-                {!isSelected && (
-                  <Image
-                    src={project.image}
-                    width={500}
-                    height={500}
-                    alt={project.title}
-                    className="border rounded-md"
-                  />
-                )}
-                {isSelected && (
-                  <div className="mt-2 text-sm transition-tranform  ease-in-out duration-300">
-                    <p>{project.description}</p>
-                    <div className="flex justify-center">
-                      <Image
-                        src={project.image}
-                        width={500}
-                        height={500}
-                        alt={project.title}
-                        className="border rounded-md my-2"
-                      />
-                    </div>
-                    <p className="mt-2 text-orange-600">
-                      <Link href={project.link} target="_blank">
-                        View the {project.title} HERE
-                      </Link>
-                    </p>
-                    <p className="text-blue-400 uppercase">
-                      Click again to close
-                    </p>
-                  </div>
-                )}
+        <div className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-4 animate-slide-up">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className=" rounded-md p-4 bg-white dark:bg-slate-800 shadow hover:shadow-lg transition-all cursor-pointer transform hover:-translate-y-1 hover:scale-105"
+              onClick={() => handleCardClick(project)}
+            >
+              <div className="relative w-full h-72 overflow-hidden rounded-md">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} image`}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
-            );
-          })}
+              <h2 className="text-lg font-bold mt-4">{project.title}</h2>
+              <p className="text-sm mt-2 text-slate-600 dark:text-slate-400">
+                {project.description.substring(0, 100)}...
+              </p>
+              <div className="mt-3">
+                {project.tech.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="inline-block bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 px-2 py-1 text-xs rounded mr-2 mb-2"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Project Details Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden w-11/12 sm:w-3/4 md:w-1/2 lg:w-2/5">
+            <div className="relative">
+              <Image
+                src={selectedProject.image}
+                alt={`${selectedProject.title} image`}
+                width={800}
+                height={600}
+                className="w-full h-64 object-cover object-top"
+              />
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 bg-gray-200 dark:bg-gray-600 rounded-full p-1 hover:bg-gray-300 dark:hover:bg-gray-500 transition"
+              >
+                &#10005;
+              </button>
+            </div>
+            <div className="p-4">
+              <h2 className="text-2xl font-bold mb-2">
+                {selectedProject.title}
+              </h2>
+              <p className="text-sm mb-4 text-slate-600 dark:text-slate-400">
+                {selectedProject.description}
+              </p>
+              <div className="mb-4">
+                {selectedProject.tech.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="inline-block bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200 px-2 py-1 text-xs rounded mr-2 mb-2"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={selectedProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-sky-600 dark:bg-sky-400 text-white dark:text-slate-800 px-4 py-2 rounded-md hover:bg-sky-700 dark:hover:bg-sky-500 transition"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </main>
