@@ -1,4 +1,3 @@
-// next.config.ts
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
@@ -6,9 +5,6 @@ const nextConfig: NextConfig = {
   swcMinify: true,
   images: {
     domains: ['www.markh.design'],
-  },
-  experimental: {
-    appDir: true,
   },
 };
 
