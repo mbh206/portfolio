@@ -19,7 +19,7 @@ export default function Navbar() {
           />
         </Link>
         <div>
-          <p className="text-xl md:text-3xl uppercase">
+          <p className="text-xl md:text-3xl uppercase m-0 mt-3">
             <span className="dark:text-sky-400 text-sky-600 font-black">
               Mark
             </span>{' '}
@@ -31,7 +31,9 @@ export default function Navbar() {
       <button
         className="relative mt-5 h-8 w-8 flex flex-col gap-1 items-right md:hidden"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label="toggle menu"
+        aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+        aria-controls="mobile-menu"
       >
         <span
           className={`block h-0.5 w-9 bg-white transform transition duration-300 ease-in-out origin-[72%] ${
@@ -55,7 +57,10 @@ export default function Navbar() {
         ></span>
       </button>
       <div
-        className={`z-50 fixed top-0 left-0 w-full flex bg-sky-400 text-slate-700 font-black text-3xl flex-col items-center uppercase text-center bg- space-y-4 py-4 transition-transform duration-300 ease-in-out transform md:hidden ${isMenuOpen ? '-translate-x-0 top-20' : 'translate-x-full top-20'}`}
+        id="mobile-menu"
+        className={`z-50 fixed top-0 left-0 w-full h-full flex bg-sky-900 text-slate-700 font-black text-3xl flex-col items-center uppercase text-center space-y-4 py-4 transition-transform duration-300 ease-in-out transform md:hidden ${
+          isMenuOpen ? '-translate-x-0 top-20' : 'translate-x-full top-20'
+        }`}
       >
         <ul>
           <li className="my-4">

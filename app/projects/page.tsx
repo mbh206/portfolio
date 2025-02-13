@@ -19,7 +19,7 @@ export default function ProjectsPage() {
     if (messageIndex < messages.length - 1) {
       const timer = setTimeout(() => {
         setMessageIndex((prev) => prev + 1);
-      }, 2000);
+      }, 1000);
       return () => clearTimeout(timer);
     } else {
       const timer = setTimeout(() => {
@@ -44,9 +44,7 @@ export default function ProjectsPage() {
       <div className="text-lg md:text-xl mb-8 min-h-[2rem] relative overflow-hidden">
         <span
           key={messageIndex}
-          className={`transition-opacity duration-500 ${
-            messageIndex > 0 ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="transition-opacity duration-300 opacity-100"
         >
           {messages[messageIndex]}
         </span>
@@ -58,15 +56,23 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className=" rounded-md p-4 bg-white dark:bg-slate-800 shadow hover:shadow-lg transition-all cursor-pointer transform hover:-translate-y-1 hover:scale-105"
+              role="button"
+              tabIndex={0}
               onClick={() => handleCardClick(project)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleCardClick(project);
+                }
+              }}
+              className="rounded-md p-4 bg-white dark:bg-slate-800 shadow transition transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 active:scale-95 hover:shadow-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-400"
             >
               <div className="relative w-full h-72 overflow-hidden rounded-md">
                 <Image
                   src={project.image}
                   alt={`${project.title} image`}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top transition-transform duration-300 ease-in-out hover:scale-105"
                 />
               </div>
               <h2 className="text-lg font-bold mt-4">{project.title}</h2>
@@ -90,7 +96,18 @@ export default function ProjectsPage() {
 
       {/* Project Details Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          tabIndex={-1}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              closeModal();
+            }
+          }}
+        >
           <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden w-11/12 sm:w-3/4 md:w-1/2 lg:w-2/5">
             <div className="relative">
               <Image
@@ -102,13 +119,14 @@ export default function ProjectsPage() {
               />
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2 bg-gray-200 dark:bg-gray-600 rounded-full p-1 hover:bg-gray-300 dark:hover:bg-gray-500 transition"
+                className="absolute top-2 right-2 bg-gray-200 dark:bg-gray-600 rounded-full p-2 hover:bg-gray-300 dark:hover:bg-gray-500 transition"
+                aria-label="Close project details modal"
               >
                 &#10005;
               </button>
             </div>
             <div className="p-4">
-              <h2 className="text-2xl font-bold mb-2">
+              <h2 id="modal-title" className="text-2xl font-bold mb-2">
                 {selectedProject.title}
               </h2>
               <p className="text-sm mb-4 text-slate-600 dark:text-slate-400">

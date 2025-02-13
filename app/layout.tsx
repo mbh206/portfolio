@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -21,16 +22,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+      </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased grid grid-rows-[80px_1fr_40px] items-center justify-items-center min-h-screen max-h-screen font-[family-name:var(--font-geist-sans)]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen font-[family-name:var(--font-geist-sans)]`}
       >
         <Navbar />
-        {children}
+        <main className="flex-grow w-full">{children}</main>
         <Footer />
       </body>
     </html>

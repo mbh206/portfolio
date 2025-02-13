@@ -1,15 +1,14 @@
+// next.config.ts
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'www.markh.design',
-        // If you want to allow all subpaths, you can add `pathname: '/**'`
-        // pathname: '/**',
-      },
-    ],
+    domains: ['www.markh.design'],
+  },
+  experimental: {
+    appDir: true,
   },
 };
 
