@@ -36,22 +36,22 @@ export default function Navbar() {
         aria-controls="mobile-menu"
       >
         <span
-          className={`block h-0.5 w-9 bg-orange transform transition duration-300 ease-in-out origin-[72%] ${
+          className={`block h-0.5 w-9 bg-sky-600 transform transition duration-300 ease-in-out origin-[72%] ${
             isMenuOpen ? '-rotate-45 transition-y-1' : ''
           }`}
         ></span>
         <span
-          className={`block h-0.5 w-9 bg-orange transform transition duration-300 ease-in-out origin-[72%] ${
+          className={`block h-0.5 w-9 bg-sky-600 transform transition duration-300 ease-in-out origin-[72%] ${
             isMenuOpen ? '-rotate-45 transition-y-1' : ''
           }`}
         ></span>
         <span
-          className={`block h-0.5 w-9 bg-orange transform transition duration-300 ease-in-out origin-[72%] ${
+          className={`block h-0.5 w-9 bg-sky-600 transform transition duration-300 ease-in-out origin-[72%] ${
             isMenuOpen ? 'rotate-45 transition-y-1' : ''
           }`}
         ></span>
         <span
-          className={`block h-0.5 w-9 bg-orange transform transition duration-300 ease-in-out origin-[72%] ${
+          className={`block h-0.5 w-9 bg-sky-600 transform transition duration-300 ease-in-out origin-[72%] ${
             isMenuOpen ? 'rotate-45 transition-y-1' : ''
           }`}
         ></span>
