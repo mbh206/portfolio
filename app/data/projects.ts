@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 1,
     title: 'Betabases - Web App',
     description:
-      "The Shipping Dashboard is a React application created as a personal learning project to learn more about React Router and demonstrate my ability to use it in real-world applications. This dashboard simulates a comprehensive shipping management system, encompassing various modules. Each module is seamlessly accessible through distinct routes, leveraging React Router's powerful routing capabilities to facilitate intuitive navigation and enhance user experience.",
+      'Betabases is a modern web-based project and task management platform built with React and Firebase. It offers intuitive Kanban and list views, allowing teams to easily organize, track, and reorder tasks through a drag-and-drop interface. The application supports real-time collaboration with features such as friend requests, connections, and notifications, ensuring that all team members stay in sync. With a focus on responsive design, Betabases adapts seamlessly to both desktop and mobile devices, providing a user-friendly experience. Its robust integration with Firebase ensures secure authentication and data storage, making it an ideal tool for managing projects and boosting team productivity.',
     image: 'https://www.markh.design/wp-content/uploads/2025/02/betabses.png',
     link: 'https://betabases.com/',
     tech: [
