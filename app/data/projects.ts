@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   image: string;
   link: string;
+  github: string;
   tech: string[];
 }
 
@@ -15,6 +16,7 @@ export const projects: Project[] = [
       'Betabases is a modern web-based project and task management platform built with React and Firebase. It offers intuitive Kanban and list views, allowing teams to easily organize, track, and reorder tasks through a drag-and-drop interface. The application supports real-time collaboration with features such as friend requests, connections, and notifications, ensuring that all team members stay in sync. With a focus on responsive design, Betabases adapts seamlessly to both desktop and mobile devices, providing a user-friendly experience. Its robust integration with Firebase ensures secure authentication and data storage, making it an ideal tool for managing projects and boosting team productivity.',
     image: 'https://www.markh.design/wp-content/uploads/2025/02/betabses.png',
     link: 'https://betabases.com/',
+    github: 'https://github.com/mbh206/betabase-react',
     tech: [
       'React',
       'React Router',
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2025/01/shippingdash.png',
     link: 'https://shippingdashboard.netlify.app/',
+    github: 'https://github.com/mbh206/shipping-dashboard',
     tech: ['React', 'React Router', 'JavaScript', 'HTML', 'CSS/Tailwind'],
   },
   {
@@ -41,6 +44,7 @@ export const projects: Project[] = [
       'BiteOff is a platform designed to help users explore, share, and experience unique culinary offerings. Whether it’s discovering a hidden gem of a local restaurant or connecting with fellow food enthusiasts, BiteOff brings people together over their love of great food and saving money. Users can browse local special meal offers, rate and review special offers, and connect with others who want to share a bite.',
     image: 'https://www.markh.design/wp-content/uploads/2024/12/biteoff.png',
     link: 'https://www.biteoff.net',
+    github: 'https://github.com/mbh206/biteoff',
     tech: [
       'Ruby',
       'Ruby on Rails',
@@ -59,6 +63,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/12/boardgamemania.png',
     link: 'https://boardgame-mania.onrender.com/',
+    github: 'https://github.com/mbh206/boardgame-mania-app',
     tech: [
       'Ruby',
       'Ruby on Rails',
@@ -77,6 +82,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.16.21-AM.png',
     link: 'https://deluxe-crumble-bf97d1.netlify.app/',
+    github: 'https://github.com/mbh206/tenzies-react-project',
     tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Netlify'],
   },
   {
@@ -87,6 +93,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.17.11-AM.png',
     link: 'https://simple-shopping-list-markharris.netlify.app/',
+    github: 'https://www.github.com/mbh206/',
     tech: ['React', 'JavaScript', 'HTML', 'CSS', 'Netlify'],
   },
   {
@@ -97,6 +104,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.21.06-AM.png',
     link: 'https://glittery-mochi-2d3b20.netlify.app/',
+    github: 'https://github.com/mbh206/restaurant-ordering-app',
     tech: ['JavaScript', 'HTML', 'CSS', 'Netlify'],
   },
   {
@@ -107,6 +115,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.23.36-AM.png',
     link: 'https://candid-cannoli-a9b28a.netlify.app/',
+    github: 'https://github.com/mbh206/chill-dash',
     tech: ['JavaScript', 'API', 'HTML', 'CSS', 'Netlify'],
   },
   {
@@ -117,6 +126,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.37.30-AM.png',
     link: 'https://mbh206.github.io/Unit-Converter/',
+    github: 'https://github.com/mbh206/Unit-Converter',
     tech: ['JavaScript', 'API', 'HTML', 'CSS'],
   },
   {
@@ -127,6 +137,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.51.30-AM.png',
     link: 'https://mbh206.github.io/color-scheme-gen/',
+    github: 'https://github.com/mbh206/color-picker',
     tech: ['JavaScript', 'API', 'HTML', 'CSS'],
   },
   {
@@ -136,6 +147,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.53.34-AM.png',
     link: 'https://mbh206.github.io/TinDog-App/',
+    github: 'https://github.com/mbh206/TinDog-App',
     tech: ['JavaScript', 'HTML', 'CSS'],
   },
   {
@@ -145,6 +157,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-15-at-9.57.17-AM.png',
     link: 'https://mbh206.github.io/twitter-clone/',
+    github: 'https://github.com/mbh206/twitter-clone',
     tech: ['JavaScript', 'HTML', 'CSS'],
   },
   {
@@ -155,6 +168,7 @@ export const projects: Project[] = [
     image:
       'https://www.markh.design/wp-content/uploads/2024/05/Screenshot-2024-05-13-at-2.39.40-PM.png',
     link: 'https://homedemo.markh.design/',
+    github: 'https://github.com/mbh206/renove-japan',
     tech: ['JavaScript', 'HTML', 'CSS'],
   },
 ];

@@ -146,9 +146,17 @@ export default function ProjectsPage() {
                 href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-block mr-2 bg-sky-600 dark:bg-sky-400 text-white dark:text-slate-800 px-4 py-2 rounded-md hover:bg-sky-700 dark:hover:bg-sky-500 transition"
+              >
+                View Live Project
+              </a>
+              <a
+                href={selectedProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-sky-600 dark:bg-sky-400 text-white dark:text-slate-800 px-4 py-2 rounded-md hover:bg-sky-700 dark:hover:bg-sky-500 transition"
               >
-                View Project
+                View GitHub Repo
               </a>
             </div>
           </div>
