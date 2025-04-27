@@ -32,8 +32,8 @@ const Contact: FC = () => {
   }
 
   return (
-    <div className="mx-4">
-      <h2 className="text-xl mb-3 block text-base font-medium text-black dark:text-slate-400">
+    <div className="m-auto max-w-[600px]">
+      <h2 className="text-xl mb-3 font-medium text-black dark:text-slate-400">
         Need to reach me? This is the easiest & fastest way to contact me.
       </h2>
       {isSubmitSuccessful && (
@@ -46,7 +46,7 @@ const Contact: FC = () => {
         <div className="mb-3">
           <label
             htmlFor="name"
-            className="text-sm mb-1 block text-base font-medium text-black dark:text-slate-600"
+            className="text-sm mb-1 block font-medium text-black dark:text-slate-600"
           >
             Full Name
           </label>
@@ -55,7 +55,7 @@ const Contact: FC = () => {
             placeholder="Full Name"
             className={`w-full rounded-md border ${
               errors.name ? 'border-red-500' : 'border-gray-300'
-            } bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md`}
+            } bg-white py-3 px-6 font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md`}
             {...register('name', { required: 'Full name is required' })}
           />
           {errors.name && (
@@ -65,7 +65,7 @@ const Contact: FC = () => {
         <div className="mb-5">
           <label
             htmlFor="email"
-            className="text-sm mb-1 block text-base font-medium text-black dark:text-slate-600"
+            className="text-sm mb-1 block font-medium text-black dark:text-slate-600"
           >
             Email Address
           </label>
@@ -74,7 +74,7 @@ const Contact: FC = () => {
             placeholder="example@domain.com"
             className={`w-full rounded-md border ${
               errors.email ? 'border-red-500' : 'border-gray-300'
-            } bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md`}
+            } bg-white py-3 px-6 font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md`}
             {...register('email', {
               required: 'Email is required',
               pattern: {
@@ -92,14 +92,14 @@ const Contact: FC = () => {
             type="hidden"
             value=""
             placeholder="Favorite pizza?"
-            className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
+            className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
             {...register('pizza')}
           />
         </div>
         <div className="mb-5">
           <label
             htmlFor="message"
-            className="text-sm mb-1 block text-base font-medium text-black dark:text-slate-600"
+            className="text-sm mb-1 block font-medium text-black dark:text-slate-600"
           >
             Message
           </label>
@@ -108,7 +108,7 @@ const Contact: FC = () => {
             placeholder="Type your message"
             className={`w-full resize-none rounded-md border ${
               errors.message ? 'border-red-500' : 'border-gray-300'
-            } bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md`}
+            } bg-white py-3 px-6 font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md`}
             {...register('message', { required: 'Message is required' })}
           ></textarea>
           {errors.message && (
@@ -121,7 +121,7 @@ const Contact: FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="hover:shadow-form hover:bg-sky-400 rounded-md bg-sky-600 py-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-50"
+            className="hover:shadow-form hover:bg-sky-400 rounded-md bg-sky-600 py-3 px-8 font-semibold text-white outline-none disabled:opacity-50"
           >
             {isSubmitting ? 'Sending...' : 'Submit'}
           </button>
