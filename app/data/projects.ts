@@ -135,6 +135,22 @@ export const projects: Project[] = [
   },
   {
     id: 7,
+    title: 'Reaction Dash - Timed Reaction Game',
+    description:
+      "Reaction Dash is a timed reaction training game that allows users to test their reaction 6 times per day. That's it.",
+    image:
+      'https://www.markh.design/wp-content/uploads/2025/05/reaction-dash.png',
+    link: 'https://reaction-dash.vercel.app/',
+    github: 'https://github.com/mbh206/reaction-dash',
+    tech: ['JavaScript', 'HTML', 'CSS', 'TypeScript', 'Next.js', 'Vercel'],
+    skills: [
+      'Game Logic Implementation',
+      'State Management (useState)',
+      'Local Storage Persistence',
+    ],
+  },
+  {
+    id: 8,
     title: 'Tenzies - Dice Rolling Game',
     description:
       'Tenzies is a simple React game where users try to get all dice to be the same in the fewest tries possible.',
@@ -152,7 +168,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: 'Simple Shopping List',
     description:
       'A simple shopping list using React to set items and delete them.',
@@ -170,7 +186,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: 'Online Delivery Order Form',
     description:
       'A test ordering page built in JavaScript, HTML, and CSS that allows users to add items to their cart and checkout.',
@@ -188,7 +204,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: 'Custom Chrome Homescreen',
     description:
       'A custom Chrome homescreen built with JavaScript, HTML, and CSS with personalized options based on location and an ever changing API background image.',
@@ -206,7 +222,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     title: 'Unit Converter App',
     description:
       'Simple metric to imperial unit conversion app using JavaScript, HTML, and CSS.',
@@ -224,7 +240,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     title: 'Brand Color Generator',
     description:
       'Brand color generator returns a color pallette based on the chosen color and color scheme',
@@ -242,7 +258,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     title: 'TinDog App',
     description: 'A Tinder clone for lonely pups.',
     image:
@@ -258,7 +274,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     title: 'Twitter Clone',
     description: 'A Twitter clone, made back when it was still Twitter...',
     image:
@@ -274,7 +290,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     title: 'Home Renovation Showcase',
     description:
       'This site was built a few years ago as a demo for my akiya home renovation.',
