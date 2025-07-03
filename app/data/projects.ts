@@ -14,6 +14,28 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: 'aiPress Chat WordPress Plugin',
+    description:
+      'aiPress Chat is a WordPress plugin and theme that allows you to add a chatbot to your website. This project is a fully custom build with a focus on performance and security. I built the plugin from scratch and the theme from scratch. I also a custom sales tracker plugin for my own site that allows me to manage downloads and key assignments',
+    image:
+      'https://www.markh.design/wp-content/uploads/2025/07/aipresschat-home-scaled.png',
+    link: 'https://aipresschat.com/',
+    github: 'https://github.com/mbh206/aipress-chat',
+    tech: ['PHP', 'React', 'CSS', 'LLM', 'OpenAI', 'Stripe', 'WordPress'],
+    skills: [
+      'WordPress Plugin development',
+      'WordPress Theme Development',
+      'Stripe Integration',
+      'WordPress API Integration',
+      'OpenAI API Integration',
+      'Form Handling & Validation',
+      'Responsive Design',
+      'Accessibility',
+      'SEO',
+    ],
+  },
+  {
+    id: 2,
     title: 'Cafe Ordering System',
     description:
       'This mock cafe order system is a quick build to showcase my React and TypeScript skills with a clean user-friendly UI.',
@@ -31,7 +53,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Portfolio',
     description:
       'This portfolio is a project in itself highlighting my ability to dive into a new framework and build something interesting and functional.',
@@ -49,7 +71,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Betabases',
     description:
       'Betabases is a modern web-based project and task management platform built with React and Firebase. It offers intuitive Kanban and list views, allowing teams to easily organize, track, and reorder tasks through a drag-and-drop interface. The application supports real-time collaboration with features such as friend requests, connections, and notifications, ensuring that all team members stay in sync. With a focus on responsive design, Betabases adapts seamlessly to both desktop and mobile devices, providing a user-friendly experience. Its robust integration with Firebase ensures secure authentication and data storage, making it an ideal tool for managing projects and boosting team productivity.',
@@ -66,7 +88,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Shipping Dashboard',
     description:
       "The Shipping Dashboard is a React application created as a personal learning project to learn more about React Router and demonstrate my ability to use it in real-world applications. This dashboard simulates a comprehensive shipping management system, encompassing various modules. Each module is seamlessly accessible through distinct routes, leveraging React Router's powerful routing capabilities to facilitate intuitive navigation and enhance user experience.",
@@ -84,7 +106,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'BiteOff',
     description:
       'BiteOff is a platform designed to help users explore, share, and experience unique culinary offerings. Whether it’s discovering a hidden gem of a local restaurant or connecting with fellow food enthusiasts, BiteOff brings people together over their love of great food and saving money. Users can browse local special meal offers, rate and review special offers, and connect with others who want to share a bite.',
@@ -109,7 +131,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Boardgame Mania',
     description:
       'BoardGame Mania is a marketplace web application that allows board game enthusiasts to rent out their personal game collections to others. This platform connects game owners with those looking to try new board games without making a full purchase, fostering a community of shared fun and discovery.',
@@ -134,7 +156,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Reaction Dash - Timed Reaction Game',
     description:
       "Reaction Dash is a timed reaction training game that allows users to test their reaction 6 times per day. That's it.",
@@ -150,7 +172,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: 'Tenzies - Dice Rolling Game',
     description:
       'Tenzies is a simple React game where users try to get all dice to be the same in the fewest tries possible.',
@@ -168,7 +190,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: 'Simple Shopping List',
     description:
       'A simple shopping list using React to set items and delete them.',
@@ -186,7 +208,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: 'Online Delivery Order Form',
     description:
       'A test ordering page built in JavaScript, HTML, and CSS that allows users to add items to their cart and checkout.',
@@ -204,7 +226,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     title: 'Custom Chrome Homescreen',
     description:
       'A custom Chrome homescreen built with JavaScript, HTML, and CSS with personalized options based on location and an ever changing API background image.',
@@ -222,7 +244,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     title: 'Unit Converter App',
     description:
       'Simple metric to imperial unit conversion app using JavaScript, HTML, and CSS.',
@@ -240,7 +262,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 13,
+    id: 14,
     title: 'Brand Color Generator',
     description:
       'Brand color generator returns a color pallette based on the chosen color and color scheme',
@@ -258,7 +280,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 14,
+    id: 15,
     title: 'TinDog App',
     description: 'A Tinder clone for lonely pups.',
     image:
@@ -274,7 +296,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 15,
+    id: 16,
     title: 'Twitter Clone',
     description: 'A Twitter clone, made back when it was still Twitter...',
     image:
@@ -290,7 +312,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 16,
+    id: 17,
     title: 'Home Renovation Showcase',
     description:
       'This site was built a few years ago as a demo for my akiya home renovation.',
