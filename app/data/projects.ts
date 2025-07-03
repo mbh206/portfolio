@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description:
       'This mock cafe order system is a quick build to showcase my React and TypeScript skills with a clean user-friendly UI.',
     image:
-      'https://www.markh.design/wp-content/uploads/2025/04/cafeordering-scaled.png',
+      'https://www.markh.design/wp-content/uploads/2025/07/cafeorderingapp-scaled.png',
     link: 'https://cafe-system.netlify.app/',
     github: 'https://github.com/mbh206/mf-cafe-ordering-system',
     tech: ['React', 'TypeScript', 'Tailwind', 'Netlify'],
